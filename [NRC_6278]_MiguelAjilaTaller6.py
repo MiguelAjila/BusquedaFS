@@ -74,3 +74,22 @@ class Grafo:
         # Estas evitaran los bucles
         visita = set()
         queue = Queue()
+	# Comenzamos a ordena los nodos, declarando un nodo_inicio
+        # La cola se comienza a en listar los nodos.
+        queue.put(nodo_inicio)
+        visita.add(nodo_inicio)
+
+        while not queue.empty():
+            # Desencolar un vértice para encolarlo e imprimirlo
+            #Mientras no este vacia no realizara la busqueda
+            nodo_actual = queue.get()
+            print(nodo_actual, end = " ")
+            """
+            Verifica el nodo esta bien para dar acceso a la siguiente ruta
+            Visita los adyacentes de las vertices donde si no esta visitado los coloca en la cola.
+            """
+
+            for (sig_nodo, peso) in self.m_list_adj[nodo_actual]:
+                if sig_nodo not in visita:
+                    queue.put(sig_nodo)
+                    visita.add(sig_nodo)
