@@ -93,3 +93,94 @@ class Grafo:
                 if sig_nodo not in visita:
                     queue.put(sig_nodo)
                     visita.add(sig_nodo)
+
+if __name__ == "__main__":
+    #### EJEMPLO #####
+
+    # Instanciamos la clase de grafico donde el grafo es unidireccional
+    # esta contiene 5 nodos
+    g0 = Grafo(5, direccion=False)
+    print(" Caso de Prueba 1")
+    # Agregue bordes al gráfico con peso predeterminado = 1
+    g0.agg_nodo(0, 1)
+    g0.agg_nodo(0, 2)
+    g0.agg_nodo(1, 2)
+    g0.agg_nodo(1, 4)
+    g0.agg_nodo(2, 3)
+    
+    # Utilizamos la funcion del grafico para agregar datos en el formulario
+    # Imprimiendo la lista de adyacencia de forma ordenada
+    g0.print_list_adj()
+
+    print ("A continuación se muestra el recorrido primero en amplitud"
+                    " (comenzando desde el vértice 0)")
+    g0.bfs_vertice(0)
+    print()
+#--------------------------------------------------------------------------------------------------------------------
+
+    g1 = Grafo(5, direccion=False)
+    print(" Caso de Prueba 2")
+    g1.agg_nodo(1, 2)
+    g1.agg_nodo(0, 4)
+    g1.agg_nodo(0, 3)
+
+    g1.print_list_adj() #Se imprime la lista de adyacencia
+ 
+    print("A continuación se muestra el recorrido primero en anchura a partir del vértice 0)")
+    #Imprime toda la lista de colas
+    g1.bfs_vertice(1)
+    print()
+
+#--------------------------------------------------------------------------------------------------------------------
+
+    g2 = Grafo(5, direccion=False)
+    print(" Caso de Prueba 3")
+    g2.agg_nodo(1, 2)
+    g2.agg_nodo(0, 4)
+    g2.agg_nodo(0, 3)
+    g2.agg_nodo(1, 2)
+    g2.agg_nodo(0, 4)
+    g2.agg_nodo(0, 3)
+
+    g2.print_list_adj() #Se imprime la lista de adyacencia
+ 
+    print("A continuación se muestra el recorrido primero en anchura a partir del vértice 0)")
+    #Imprime toda la lista de colas
+    g2.bfs_vertice(0)
+    print()
+
+#--------------------------------------------------------------------------------------------------------------------
+
+    g3 = Grafo(5, direccion=False)
+    print(" Caso de Prueba 4")
+    g3.agg_nodo(1, 2)
+    g3.agg_nodo(0, 4)
+    g3.agg_nodo(0, 3)
+    g3.agg_nodo(1, 2)
+    g3.agg_nodo(0, 4)
+    g3.agg_nodo(0, 3)
+
+    g3.print_list_adj() #Se imprime la lista de adyacencia
+ 
+    print("A continuación se muestra el recorrido primero en anchura a partir del vértice 0)")
+    #Imprime toda la lista de colas
+    g3.bfs_vertice(0)
+    print()
+
+#--------------------------------------------------------------------------------------------------------------------
+
+    g4 = Grafo(5, direccion=False)
+    print(" Caso de Prueba 5")
+    g4.agg_nodo(1, 2)
+    g4.agg_nodo(0, 4)
+    g4.agg_nodo(0, 3)
+    g4.agg_nodo(1, 2)
+    g4.agg_nodo(0, 4)
+    g4.agg_nodo(0, 3)
+
+    g4.print_list_adj() #Se imprime la lista de adyacencia
+
+    print("A continuación se muestra el recorrido primero en anchura a partir del vértice 0)")
+    #Imprime toda la lista de colas
+    g4.bfs_vertice(0)
+    print()
