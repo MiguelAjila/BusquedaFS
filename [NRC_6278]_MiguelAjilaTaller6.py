@@ -14,5 +14,9 @@ class Grafo:
     def __init__(self, num_nodos, direccion=True):
         self.m_num_nodos = num_nodos
         self.m_nodos = range(self.m_num_nodos)
-
     """
+    # Constructor
+    # El uso de Self permite el funcionamiento automatico
+    def __init__(self, num_nodos, direccion=True):
+        self.m_num_nodos = num_nodos
+        self.m_nodos = range(self.m_num_nodos)
