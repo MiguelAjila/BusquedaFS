@@ -43,9 +43,8 @@ class Grafo:
     # Colocamos variables de nodo y peso
     def agg_nodo(self, nodo1, nodo2, peso=1):
         self.m_list_adj[nodo1].add((nodo2, peso))
-	def agg_nodo(self, nodo1, nodo2, peso=1):
-        self.m_list_adj[nodo1].add((nodo2, peso))
-        """
+	
+	"""
         El metodo denominado "agg_nodo", aqui verifica el peso y agregara
         un nodo en el borde del grafico, a su vez se utilizan las condicionales.
         Donde se comprueba si los nodos contienen algun valor o vacio.
