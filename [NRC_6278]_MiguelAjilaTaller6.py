@@ -153,12 +153,12 @@ if __name__ == "__main__":
 
     g3 = Grafo(5, direccion=False)
     print(" Caso de Prueba 4")
-    g3.agg_nodo(1, 2)
-    g3.agg_nodo(0, 4)
-    g3.agg_nodo(0, 3)
-    g3.agg_nodo(1, 2)
-    g3.agg_nodo(0, 4)
-    g3.agg_nodo(0, 3)
+    g3.agg_nodo(0, 2)
+    g3.agg_nodo(0, 1)
+    g3.agg_nodo(2, 4)
+    g3.agg_nodo(1, 0)
+    g3.agg_nodo(3, 2)
+    g3.agg_nodo(3, 4)
 
     g3.print_list_adj() #Se imprime la lista de adyacencia
  
@@ -171,12 +171,14 @@ if __name__ == "__main__":
 
     g4 = Grafo(5, direccion=False)
     print(" Caso de Prueba 5")
-    g4.agg_nodo(1, 2)
+    g4.agg_nodo(0, 1)
     g4.agg_nodo(0, 4)
-    g4.agg_nodo(0, 3)
+    g4.agg_nodo(2, 3)
     g4.agg_nodo(1, 2)
-    g4.agg_nodo(0, 4)
-    g4.agg_nodo(0, 3)
+    g4.agg_nodo(1, 4)
+    g4.agg_nodo(1, 3)
+
+    g4.print_list_adj() #Se imprime la lista de adyacencia
 
     g4.print_list_adj() #Se imprime la lista de adyacencia
 
