@@ -119,15 +119,18 @@ if __name__ == "__main__":
 
     g1 = Grafo(5, direccion=False)
     print(" Caso de Prueba 2")
-    g1.agg_nodo(1, 2)
-    g1.agg_nodo(0, 4)
-    g1.agg_nodo(0, 3)
+    g1.agg_nodo(0, 1)
+    g1.agg_nodo(0, 2)
+    g1.agg_nodo(1, 3)
+    g1.agg_nodo(1, 4)
+    g1.agg_nodo(2, 3)
+    g1.agg_nodo(2, 4)
 
     g1.print_list_adj() #Se imprime la lista de adyacencia
  
     print("A continuación se muestra el recorrido primero en anchura a partir del vértice 0)")
     #Imprime toda la lista de colas
-    g1.bfs_vertice(1)
+    g1.bfs_vertice(0)
     print()
 
 #--------------------------------------------------------------------------------------------------------------------
